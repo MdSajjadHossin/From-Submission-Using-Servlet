@@ -4,27 +4,39 @@
         <title>Form Submission</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .container{
+                width: 50%;
+                border: 2px solid black;
+                margin: auto;
+                padding: 20px;
+                font-size: 20px;
+            }
+            .table tr td input{
+                font-size: 15px;
+            }
+        </style>
     </head>
     <body>
         <div class="container">
             <h1>My Form</h1>
             
             <form action="RegisterServlet" method="post">
-                <table>
+                <table class="table">
                     <tr>
-                        <td>Enter Your Name</td>
+                        <td>Enter Name</td>
                         <td><input type="text" name="user_name" placeholder="Enter Your Name"/></td>
                     </tr>
                     <tr>
-                        <td>Enter Your Password</td>
+                        <td>Enter Password</td>
                         <td><input type="password" name="user_password" placeholder="Enter Your password"/></td>
                     </tr>
                     <tr>
-                        <td>Enter Your Email</td>
+                        <td>Enter Email</td>
                         <td><input type="email" name="user_email" placeholder="Enter Your Email"/></td>
                     </tr>
                     <tr>
-                        <td>Select Gender</td>
+                        <td>Gender</td>
                         <td><input type="radio" name="user_gender" value="male"/>Male &nbsp; &nbsp; <input type="radio" name="user_gender" value="femal"/>Female </td>
                     </tr>
                     <tr>
@@ -36,6 +48,18 @@
                                 <option value="Python">Python</option>
                                 <option value="Java">Android</option>
                             </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" value="checked" name="condition">Agreed Terms & Condition
+                        </td>
+                        <!--<td style="text-align: left;"> Agreed Terms & Condition</td>-->
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit">Submit</button>
+                            <button type="reset">Reset</button>
                         </td>
                     </tr>
                 </table>
